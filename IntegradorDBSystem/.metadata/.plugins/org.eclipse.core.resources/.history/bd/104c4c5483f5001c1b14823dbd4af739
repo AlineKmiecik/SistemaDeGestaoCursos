@@ -1,0 +1,8 @@
+server.port=8080
+
+#Data base configurations
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=com.mysql.cj.jdbc.Driver://localhost:3306/system-gestao-cursos
+spring.datasource.username=root
+spring.datasource.password=admin
+spring.jpa.show-sql: true

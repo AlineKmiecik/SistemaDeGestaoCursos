@@ -1,0 +1,19 @@
+package com.IntegradorDBSystem.IntegradorDBSystem.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.IntegradorDBSystem.IntegradorDBSystem.models.CursoModel;
+import com.IntegradorDBSystem.IntegradorDBSystem.repositories.CursoRepository;
+
+@Service
+public class CursoService {
+	@Autowired
+	CursoRepository cursoRepository;
+	
+	public CursoModel createCurso(CursoModel cursoModel) {
+		
+		return null;
+	}
+	
+}

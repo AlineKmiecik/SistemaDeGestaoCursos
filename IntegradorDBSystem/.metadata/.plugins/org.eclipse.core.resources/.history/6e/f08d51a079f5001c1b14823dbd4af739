@@ -1,0 +1,5 @@
+package com.IntegradorDBSystem.IntegradorDBSystem.dtos;
+
+public class CursoDTO {
+
+}

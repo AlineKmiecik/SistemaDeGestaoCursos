@@ -1,0 +1,17 @@
+package com.IntegradorDBSystem.IntegradorDBSystem.dtos;
+
+import java.util.List;
+
+import javax.validation.constraints.NotBlank;
+
+import com.IntegradorDBSystem.IntegradorDBSystem.models.AlunoModel;
+
+import lombok.Data;
+
+@Data
+public class CursoDTO {
+	@NotBlank
+    private String nome;
+	@NotBlank
+    private List<AlunoModel> alunos;
+}

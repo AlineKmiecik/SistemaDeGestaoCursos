@@ -1,0 +1,34 @@
+package com.IntegradorDBSystem.IntegradorDBSystem.services;
+
+import java.time.LocalDateTime;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.IntegradorDBSystem.IntegradorDBSystem.enums.StatusCursoEvento;
+import com.IntegradorDBSystem.IntegradorDBSystem.models.CursoModel;
+import com.IntegradorDBSystem.IntegradorDBSystem.repositories.CursoRepository;
+
+@Service
+public class CursoService {
+	@Autowired
+	CursoRepository cursoRepository;
+	
+	public CursoModel createCurso(CursoModel cursoModel) {
+		cursoModel.setDataCriacaoCurso(LocalDateTime.now());
+		
+		try {
+			
+			
+			
+			System.out.println(StatusCursoEvento.SUCCESS);
+			
+		} catch (Exception e) {
+			System.out.println(StatusCursoEvento.ERROR);
+			
+		}finally {
+			return null;	
+		}
+	}
+	
+}

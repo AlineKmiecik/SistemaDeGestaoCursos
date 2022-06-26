@@ -1,0 +1,41 @@
+package com.IntegradorDBSystem.IntegradorDBSystem.services;
+
+import java.time.LocalDateTime;
+import java.util.Optional;
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import com.IntegradorDBSystem.IntegradorDBSystem.enums.StatusCursoEvento;
+import com.IntegradorDBSystem.IntegradorDBSystem.models.CursoModel;
+import com.IntegradorDBSystem.IntegradorDBSystem.repositories.CursoRepository;
+
+@Service
+public class CursoService {
+	@Autowired
+	CursoRepository cursoRepository;
+	
+	public CursoModel createCurso(CursoModel cursoModel) {
+		try {
+			cursoModel.setDataCriacaoCurso(LocalDateTime.now());	
+			
+			return cursoRepository.save(cursoModel);
+			
+		} catch (Exception e) {
+			System.out.println(StatusCursoEvento.ERROR + ": " + e);
+			
+		}
+	}
+	
+	public Page<CursoModel> findAll(Pageable pageable) {
+        return  cursoRepository.findAll(pageable);
+    }
+
+    public Optional<CursoModel> findById(UUID cursoId) {
+        return cursoRepository.findById(cursoId);
+    }
+	
+}
