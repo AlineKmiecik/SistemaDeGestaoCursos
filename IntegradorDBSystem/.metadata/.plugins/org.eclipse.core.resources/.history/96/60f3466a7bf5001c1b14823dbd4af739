@@ -1,7 +1,0 @@
-package com.IntegradorDBSystem.IntegradorDBSystem.enums;
-
-public enum StatusCursoEvento {
-	PROCESSING,
-    SENT,
-    ERROR;
-}
